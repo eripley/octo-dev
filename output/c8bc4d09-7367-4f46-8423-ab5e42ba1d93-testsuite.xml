@@ -1,0 +1,87 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1612111067927' stop='1612111082040'>
+    <name>User registration @Smoke</name>
+    <title>User registration @Smoke</title>
+    <test-cases>
+        <test-case start='1612111069096' status='passed' stop='1612111082036'>
+            <name>Ordinary registration</name>
+            <title>Ordinary registration</title>
+            <labels>
+                <label name='tag' value='@Smoke'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1612111069103' status='passed' stop='1612111071378'>
+                    <name>Given I on the main page </name>
+                    <title>Given I on the main page </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1612111069103' status='passed' stop='1612111071377'>
+                            <name>I am on page "ru"</name>
+                            <title>I am on page "ru"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1612111071378' status='passed' stop='1612111071561'>
+                    <name>When I click on the sign up button </name>
+                    <title>When I click on the sign up button </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1612111071378' status='passed' stop='1612111071395'>
+                            <name>I wait for element {"xpath":"//button[@data-type=\"page_header\"]"}</name>
+                            <title>I wait for element {"xpath":"//button[@data-type=\"page_header\"]"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1612111071395' status='passed' stop='1612111071559'>
+                            <name>I click {"xpath":"//button[@data-type=\"page_header\"]"}</name>
+                            <title>I click {"xpath":"//button[@data-type=\"page_header\"]"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1612111071561' status='passed' stop='1612111082036'>
+                    <name>And I choose a role </name>
+                    <title>And I choose a role </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1612111071561' status='passed' stop='1612111071754'>
+                            <name>I click {"id":"signup-payed-position"}</name>
+                            <title>I click {"id":"signup-payed-position"}</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1612111071755' status='passed' stop='1612111076756'>
+                            <name>I wait 5</name>
+                            <title>I wait 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1612111076757' status='passed' stop='1612111076862'>
+                            <name>I press key "ArrowDown"</name>
+                            <title>I press key "ArrowDown"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1612111076862' status='passed' stop='1612111077034'>
+                            <name>I press key "Enter"</name>
+                            <title>I press key "Enter"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1612111077034' status='passed' stop='1612111082035'>
+                            <name>I wait 5</name>
+                            <title>I wait 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

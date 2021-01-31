@@ -1,0 +1,28 @@
+{
+    "plugins": [
+        "codeceptjs"
+    ],
+    "env": {
+        "commonjs": true,
+        "es2020": true,
+        "codeceptjs/codeceptjs": true
+    },
+    "extends": [
+        "airbnb-base",
+        "plugin:codeceptjs/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 11
+    },
+    "rules": {
+        "codeceptjs/no-actor-in-scenario": 2,
+        "codeceptjs/no-pause-in-scenario": "ERROR",
+        "codeceptjs/no-exclusive-tests": "ERROR",
+        "codeceptjs/no-skipped-tests": "ERROR"
+    },
+    "globals": {
+        "Given": true,
+        "When": true,
+        "Then": true
+    }
+}
