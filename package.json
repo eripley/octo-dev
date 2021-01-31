@@ -1,0 +1,9 @@
+{
+  "name": "octo",
+  "version": "1.0.0",
+  "description": "for non-commercial purposes",
+  "main": "index.js",
+  "repository": "https://github.com/eripley/octo-dev.git",
+  "author": "dc",
+  "license": "MIT"
+}
