@@ -2,8 +2,23 @@
   "name": "octo",
   "version": "1.0.0",
   "description": "for non-commercial purposes",
-  "main": "index.js",
-  "repository": "https://github.com/eripley/octo-dev.git",
-  "author": "dc",
-  "license": "MIT"
+  "scripts": {
+    "lint": "eslint . --ext .ts --ext .js",
+    "lint-fix": "eslint e2e/ --fix",
+    "report:open": "allure serve output",
+    "report:remove": "rm -rf output/*",
+    "e2e:test": "yarn report:remove ; codeceptjs run-workers 1 --plugins allure --grep '^(?!.*@Ignore)'",
+    "e2e:test:smoke": "yarn e2e:test --grep '^(?!.*@Ignore)(?=.*@Smoke)'",
+    "e2e:test:debug": "yarn report:remove ; codeceptjs run --grep '^(?!.*@Ignore)(?=.*@debug)' --debug --verbose --debug-brk ; yarn report:open",
+    "e2e:test-and-report": "yarn e2e:test ; yarn report:open"
+  },
+  "dependencies": {
+    "codeceptjs": "^3.0.4",
+    "base-64": "^0.1.0",
+    "expect": "^26.6.2"
+  },
+  "devDependencies": {
+    "jest": "^26.1.0",
+    "playwright": "^1.6.2"
+  }
 }
