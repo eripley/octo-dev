@@ -9,8 +9,17 @@ Then type:
 - node.js
 - codeceptJS
 
-## 🚀 Test runs
+## 🔴 Test runs
 Run tests :
-``` e2e:test:smoke```
+``` yarn e2e:test:smoke```
 
-cheers.
+## ⬛️ Files and folder structure
+
+`/e2e/features:` This directory contains all the BDD e2e tests written on the gherkin language.
+
+`/e2e/pages:` This is the page object directory, it contains all page object models for the UI.
+
+
+
+
+
