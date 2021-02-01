@@ -8,7 +8,8 @@
 
 - node.js (platform)
 - ES6 (implementation)
-- codeceptJS (framework&runner)
+- codeceptJS (runner)
+- playwright (automation framework) 
 - cucumber (terms)
 
 ## 🔴 Test runs
