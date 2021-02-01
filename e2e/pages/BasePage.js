@@ -15,6 +15,8 @@ const SELECTORS = {
   VALIDATE_WINDOW: { id: '//div[@class="validate__text"]' },
   VALIDATE_TEXT: { xpath: '//div[@class="validate__text"]' },
   OPTION_VALUE: { xpath: '//option[@value="CEO"]' },
+  COOKIE_BUTTON: { id: 'adroll_allow_all' },
+  VALIDATE_TOOLTIP: { xpath: '//div[@class="validate__text"]' },
 };
 
 const KEYBOARD = {
@@ -28,11 +30,14 @@ const KEYBOARD = {
 
 Given(/^I on the main page$/, async () => {
   await I.amOnPage('ru');
+  I.wait(ClockUnit.DEFAULT_TIMEOUT);
+  await I.click(SELECTORS.COOKIE_BUTTON);
 });
 
 When(/^I click on the sign up button$/, async () => {
   await I.waitForElement(SELECTORS.SIGNUP_BUTTON);
   await I.click(SELECTORS.SIGNUP_BUTTON);
+  await I.wait(ClockUnit.DEFAULT_TIMEOUT);
 });
 
 When('I filling the form with parameters', async (dataTable) => {
@@ -45,21 +50,19 @@ When('I filling the form with parameters', async (dataTable) => {
   await I.fillField(SELECTORS.PHONE_INPUT, phone);
 });
 
-When(/^I choose a role$/, async () => {
+When(/^I choose a role "([^"]*)?"$/, async (role) => {
   await I.click(SELECTORS.ROLE_CHOOSING);
-  await I.wait(5);
-  // await I.click(SELECTORS.OPTION_VALUE);
-  await I.pressKey(KEYBOARD.ARROW_DOWN);
+  await I.selectOption(SELECTORS.ROLE_CHOOSING, role);
   await I.pressKey(KEYBOARD.ENTER);
-  await I.wait(5);
-  // await I.wait(5);
+  // await I.wait(ClockUnit.DEFAULT_TIMEOUT);
 });
 
 When(/^I press a register button$/, async () => {
   await I.click(SELECTORS.REGISTER_BUTTON);
-  await I.wait(5);
+  await I.wait(ClockUnit.DEFAULT_TIMEOUT);
 });
 
 Then(/^I see the text "([^"]*)?" inside window$/, async (text) => {
-  await I.seeTextEquals(text, SELECTORS.VALIDATE_TEXT);
+  await I.waitForVisible(SELECTORS.VALIDATE_TOOLTIP);
+  await I.see(text);
 });
