@@ -23,5 +23,5 @@ exports.config = {
       enabled: false,
     },
   },
-  name: 'Tiger ATQA Framework',
+  name: 'non-commercial',
 };
