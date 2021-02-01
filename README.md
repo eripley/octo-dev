@@ -11,6 +11,7 @@
 - codeceptJS (runner)
 - playwright (automation framework) 
 - cucumber (terms)
+- allure (reporting)
 
 ## 🔴 Test runs
 - Run tests :
